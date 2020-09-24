@@ -1,38 +1,158 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  color: #dadada;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
   display: flex;
+  align-items: center;
+  position: fixed;
+  justify-content: center;
+  width: 100vw;
+  height: 70px;
+  padding: 30px;
+  font-size: 10px
+}
+
+.main {
+  display: flex;
+  height: auto;
+  min-height: 900px;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 75%, rgb(0,0,0) 100%), url('https://startbootstrap.github.io/startbootstrap-grayscale/assets/img/bg-masthead.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.big-title {
+  font-size: 6rem;
+  letter-spacing: 20px;
+}
+
+.smol-title {
+  width: 550px;
+  text-align: center;
+  position: relative;
+  bottom: 5rem;
+  font-size: 25px;
+  line-height:40px;
+}
+
+.nav-bar-menu {
+  justify-content: space-between;
+}
+
+.nav-bar-icon {
+  color: rgb(99,202,168);
+  border: 1px solid rgb(99,202,168);
+  height: 40px;
+  width: 80px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-radius: 10%;
+  margin: 10vw;
+}
+
+a {
+  margin: 25px;
+  color: #dadada;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.menu {
+  height: 150px;
+  width: 100vw;
+  background-color: white;
+  position: fixed;
+  top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  color: black;
+}
+
+.do-not-display {
+  display: none;
+}
+
+.start-button {
   color: white;
+  background-color: rgb(99,202,168);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 180px;
+  border-radius: 5%
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 1000px) {
+  .nav-bar-menu {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  header {
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-bar-title {
+    font-size: 25px;
+    margin: 10vw;
+    margin-right: 20vw;
+    color: black;
+  }
+
+  a {
+    color: black;
+    height: 5px;
+    font-size: 18px;
+    color: rgb(99,202,168);
+    margin: 15px;
+    position: relative;
+    left: 7rem;
+  }
+
+  .big-title {
+    font-size: 3rem;
+    position: relative;
+    bottom: 2rem;
+  }
+  
+  .smol-title {
+    font-size: 12px;
+    width: 250px;
+    line-height: 20px;
+    position: relative;
+    bottom: 4rem;
+  }
+}
+
+@media (min-width: 1001px) {
+  .nav-bar-icon {
+    display: none;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .nav-bar-title {
+    margin-right: 35vw;
+  }
+}
+
+@media (min-width: 1251px) {
+  .nav-bar-title {
+    margin-right: 50vw;
   }
 }
